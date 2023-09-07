@@ -1,0 +1,2 @@
+my_cool_variable = 10 + 1 == 11       #Verifica que la suma de los numeros sea igual al numero con el que se esta igualando 
+print(my_cool_variable)               #EN caso de ser igual se imprime la palabra True, en caso contrario se imprime False
