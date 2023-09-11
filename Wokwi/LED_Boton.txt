@@ -1,0 +1,2 @@
+Enciende el led con el boton, el cual imprime 0 si esta oprimido e imprime 1 si esta en reposo
+https://wokwi.com/projects/375617050979920897
