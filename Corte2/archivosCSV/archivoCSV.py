@@ -18,6 +18,7 @@ filename = "Datos.csv"
 # Escribiendo archivo CSV
 
 with open(filename, 'w') as csvfile:
+ 
     # Creando archivo CSV
     csvwriter = csv.writer(csvfile)
      
