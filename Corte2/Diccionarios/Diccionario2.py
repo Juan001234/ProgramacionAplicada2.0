@@ -1,3 +1,11 @@
+print("Excercise 1")
+my_dictionary = {"song": "Estranged","artist": "Gun's and Roses"}
+print(my_dictionary)
+my_dictionary["song"] = "Paradise city"
+print(my_dictionary["song"])
+print()
+
+
 print ({"name": "Victor"}.get("name"))
 # Retorna "Victor"
 # Retornar no es lo mismo que imprimir
