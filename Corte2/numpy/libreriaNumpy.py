@@ -153,3 +153,54 @@ import numpy as np
 arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
 
 print('Last element from 2nd dim: ', arr[1, -1]) #Utiliza indexación negativa para acceder a una matriz desde el final
+
+
+#Corte de matriz NumPy
+# En ptython Cortar significa tomar elementos de un índice determinado a otro índice determinado.
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5]) #Corte elementos del índice 1 al índice 5
+#impoertante:El resultado incluye el índice inicial, pero excluye el índice final.
+
+#Cortar elementos desde el índice 4 hasta el final de la matriz
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[4:])
+
+#Cortar elementos desde el principio hasta el índice 4 (no incluido)
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[:4])
+
+
+#Rebanado negativo
+#Utilice el operador menos para hacer referencia a un índice desde el final
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[-3:-1])
+
+
+
+#STEP
+#Utilice el valor STEP para determinar el paso del corte
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5:2]) #Devuelve todos los demás elementos del índice 1 al índice 5
+
+#Devolver todos los demás elementos de toda la matriz
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[::2])
