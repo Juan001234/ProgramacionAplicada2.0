@@ -89,3 +89,59 @@ arr = np.array([1, 2, 3, 4], ndmin=5)
 
 print(arr)
 print('number of dimensions :', arr.ndim) #Una mateiz de 5 dimensiones y que verifica cuantas dimensiones tiene
+
+
+
+#Acceder a elementos de matriz
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr[0]) #Obtiene el primer elemento de la siguiente matriz
+
+#Obtiene el tercer y cuarto elemento de la siguiente matriz y los suma
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr[2] + arr[3])
+
+#Acceder a matrices 2-D
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('2nd element on 1st row: ', arr[0, 1]) Accede al elemento en la primera fila, segunda columna
+
+#Acceda a matrices 3-D
+import numpy as np
+
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+print(arr[0, 1, 2]) #Accede al tercer elemento de la segunda matriz de la primera matriz
+
+#explicacion:
+#arr[0, 1, 2]imprime el valor 6.
+
+#Y es por esto:
+
+#El primer número representa la primera dimensión, que contiene dos matrices:
+#[[1, 2, 3], [4, 5, 6]]
+#y:
+#[[7, 8, 9], [10, 11, 12]]
+#Desde seleccionamos 0, nos queda el primer array:
+#[[1, 2, 3], [4, 5, 6]]
+
+#El segundo número representa la segunda dimensión, que también contiene dos matrices:
+#[1, 2, 3]
+#y:
+#[4, 5, 6]
+#Como seleccionamos 1, nos queda la segunda matriz:
+#[4, 5, 6]
+
+#El tercer número representa la tercera dimensión, que contiene tres valores:
+#4
+#5
+#6
+#Como seleccionamos 2, terminamos con el tercer valor:
+#6
