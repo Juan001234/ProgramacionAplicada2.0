@@ -51,3 +51,41 @@ import numpy as np
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
 print(arr.reshape(2, 4).base)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+____________________________¿Dimensión desconocida?____________________________ 
+#Se te permite tener una dimensión "desconocida".
+
+#Lo que significa que no tiene que especificar un número exacto para uno de los dimensiones en el método de remodelación.
+
+#Pase como el valor, y NumPy Calcula este número por ti.-1
+
+
+----------Ejemplo 5:
+Convierta una matriz 1D con 8 elementos en una matriz 3D con elementos 2x2:
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+newarr = arr.reshape(2, 2, -1)
+
+print(newarr)
+#Nota: No podemos pasar a más de una dimensión.-1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+____________________________Aplanamiento de las matrices____________________________ 
+#Aplanar una matriz significa convertir una matriz multidimensional en una matriz 1D.
+
+#Podemos usar para hacer esto.reshape(-1)
+
+----------Ejemplo 6:
+Convierta la matriz en una matriz 1D:
+import numpy as np
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+newarr = arr.reshape(-1)
+
+print(newarr)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#Nota: Hay muchas funciones para cambiar las formas de las matrices en numpy , y también para reorganizar los elementos , , , etc. Estos se incluyen en la sección Intermedio a Avanzado de numpy.flatten ravel rot90 flip fliplr flipud      
