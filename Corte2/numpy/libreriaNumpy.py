@@ -145,3 +145,11 @@ print(arr[0, 1, 2]) #Accede al tercer elemento de la segunda matriz de la primer
 #6
 #Como seleccionamos 2, terminamos con el tercer valor:
 #6
+
+
+#Indexación negativa
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('Last element from 2nd dim: ', arr[1, -1]) #Utiliza indexación negativa para acceder a una matriz desde el final
