@@ -204,3 +204,26 @@ import numpy as np
 arr = np.array([1, 2, 3, 4, 5, 6, 7])
 
 print(arr[::2])
+
+
+#Cortar matrices 2-D
+#Desde el segundo elemento, corta los elementos del índice 1 al índice 4 (no incluido)
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[1, 1:4]) #recordar que el segundo elemento tiene índice 1
+
+#De ambos elementos, devuelve el índice 2:
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[0:2, 2])
+
+#De ambos elementos, divida el índice 1 al índice 4 (no incluido), esto devolverá una matriz 2-D:
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[0:2, 1:4])
