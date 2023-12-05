@@ -9,8 +9,8 @@ import time
 import ntptime
 import utime
 
-ssid = 'FAMILIA_GONZALEZ'
-password = 'Mireya36'
+ssid = 'Nombre de Red'
+password = 'Clave'
 
 station = network.WLAN(network.STA_IF)
 
