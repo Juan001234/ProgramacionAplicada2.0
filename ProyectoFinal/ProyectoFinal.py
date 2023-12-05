@@ -67,14 +67,16 @@ def obtener_fechahora():
         return None
     
     try:
-        # Obtiene la fecha y hora actual en la zona horaria local
+        # Obtiene la fecha y hora actual en tiempo UTC
         rtc_time_utc = utime.localtime()
-        rtc_time_bogota = utime.localtime(utime.mktime(rtc_time_utc) - 5 * 3600)  # UTC-5 para Bogotá, Colombia
+        
+        # Convierte el tiempo UTC a tiempo local (Bogotá, Colombia - UTC-5)
+        rtc_time_bogota = utime.localtime(utime.mktime(rtc_time_utc) - 5 * 3600)
     
         print("Fecha y hora actual en Bogotá, Colombia:", rtc_time_bogota)
         return rtc_time_bogota
-    except OverflowError as e:
-        print("Error de desbordamiento al convertir tiempo de Unix:", e)
+    except (OverflowError, ValueError) as e:
+        print("Error al convertir tiempo:", e)
         return None
 
 def pagina_web():
@@ -121,7 +123,7 @@ def pagina_web():
     // Llamar a la función al cargar la página y configurar un temporizador para que se repita cada 5 segundos
     window.onload = function() {
         enviarSolicitudes();
-        setInterval(enviarSolicitudes, 10000);  // Repetir cada 5 segundos (o ajusta según sea necesario)
+        //setInterval(enviarSolicitudes, 10000);  // Repetir cada 5 segundos (o ajusta según sea necesario)
     };
 </script>
         </head>
@@ -192,9 +194,10 @@ def toggle_bomba():
     # Aquí colocas la lógica para encender o apagar la bomba según el estado actual
     if humedad_actual < umbral_encendido:
         rele.value(0)
-        time.sleep(3)
-        rele.value(1)
         print("Enviando un chorro de agua a la planta")
+        time.sleep(2.5)
+        rele.value(1)
+        time.sleep(2.5)
         # Puedes utilizar un pin específico para controlar la bomba
         # Por ejemplo: Pin(5, Pin.OUT).on()
     else:
@@ -245,3 +248,4 @@ while True:
         conexion.sendall(respuesta)
         conexion.close()
 
+ 
